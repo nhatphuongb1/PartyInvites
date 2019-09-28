@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+@model GuestResponse;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm Nè</title>
+    <div asp-validation-summary="All"></div>
+</head>
+<body>
+    <form asp-action="Rsvpform" method="post">
+        <p>
+            <label asp-for="Name"> Your name:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email"> Email:</label>
+            <input asp-for="Email" />
+        </p>
+
+        <p>
+            <label asp-for="Phone">Phone:</label>
+            <input asp-for="Phone" />
+        </p>
+
+        <p>
+            <label>Will you attend ?:</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
+            </select>
+        </p>
+
+        <button type="submit">Submit RSVP</button>
+
+    </form>
+
+    <div>
+        
+    </div>
+</body>
+</html>
